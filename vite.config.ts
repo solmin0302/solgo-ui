@@ -8,11 +8,18 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 // .json 파일을 esmodule로 변환해서 사용할 수 있게 해줍니다.
 import json from '@rollup/plugin-json';
+
+import dts from 'vite-plugin-dts';
 // https://vitejs.dev/config/
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      include: ['src/'],
+    }),
+  ],
   build: {
     lib: {
       entry: path.resolve('src', 'index.ts'),
