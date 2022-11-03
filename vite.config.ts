@@ -8,7 +8,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 // .json 파일을 esmodule로 변환해서 사용할 수 있게 해줍니다.
 import json from '@rollup/plugin-json';
-
+// 번들 파일에 declaration 파일을 만들어줌 없으면 타입이 안만들어짐.
 import dts from 'vite-plugin-dts';
 // https://vitejs.dev/config/
 
@@ -28,7 +28,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      // external: 라이브러리에 포함하지 않을 디펜던시를 명시해주세요
+      // external: 라이브러리에 포함하지 않을 디펜던시를 명시해주세요 여기다 styled-compoenets를 넣어주었더니 사용처에서 styled-components 를 깔지 않으면 사용이 불가했음
       external: [...Object.keys(pkg.peerDependencies)],
       plugins: [
         commonjs({ include: 'node_modules/**' }),

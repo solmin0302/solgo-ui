@@ -14,13 +14,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "declaration": true,
-    "baseUrl": "src",
-    "typeRoots": ["src/@types"],
-    "declarationMap": true
+    "jsx": "react-jsx"
   },
   "include": [".storybook/*", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
+  "exclude": ["**/tests", "**/*.test.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
