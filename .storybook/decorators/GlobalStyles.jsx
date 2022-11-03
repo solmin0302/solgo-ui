@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -8,10 +8,3 @@ const GlobalStyle = createGlobalStyle`
     background-color: cornflowerblue
   }
 `;
-
-export default (storyFn) => (
-  <>
-    <GlobalStyle />
-    {storyFn()}
-  </>
-);

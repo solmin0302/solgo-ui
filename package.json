@@ -1,7 +1,7 @@
 {
   "name": "solgo-ui",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -15,9 +15,7 @@
     "preview": "vite preview",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {
-    "styled-components": "^5.3.6"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
@@ -25,7 +23,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
-    "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-json": "^5.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@storybook/addon-actions": "^6.5.13",
@@ -41,6 +38,7 @@
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.2.0",
     "babel-loader": "^8.2.5",
+    "styled-components": "^5.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^6.5.13",

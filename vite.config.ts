@@ -26,7 +26,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      // external: 라이브러리에 포함하지 않을 디펜던시를 명시해주세요 여기다 styled-compoenets를 넣어주었더니 사용처에서 styled-components 를 깔지 않으면 사용이 불가했음
+      // external: 라이브러리에 포함하지 않을 디펜던시를 명시해주세요
       external: [...Object.keys(pkg.peerDependencies)],
       plugins: [resolve({ extensions }), json()],
     },

@@ -1,3 +1,3 @@
 declare global {
-  type Asd = 'asd';
+  type ABC = string;
 }

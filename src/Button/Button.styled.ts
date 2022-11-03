@@ -7,5 +7,6 @@ export const commonButtonStyles = css<ButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: ${({ size, fullWidth }) => (fullWidth ? 'sm' : 'lg')};
+  height: ${({ size, fullWidth, theme }) =>
+    fullWidth ? theme.palette.aqua100 : theme.spacing.gsUitkH0};
 `;
