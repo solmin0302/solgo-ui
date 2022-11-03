@@ -4,11 +4,14 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
-  body {
-    line-height: 1.5;
-    margin:0;
-    padding:0;
+  #root {
+    background-color: cornflowerblue
   }
 `;
 
-export default GlobalStyle;
+export default (storyFn) => (
+  <>
+    <GlobalStyle />
+    {storyFn()}
+  </>
+);

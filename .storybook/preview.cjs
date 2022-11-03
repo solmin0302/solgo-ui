@@ -1,6 +1,6 @@
 import GlobalStyle from './decorators/GlobalStyles';
 
-// export const decorators = [GlobalStyle];
+export const decorators = [GlobalStyle];
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
